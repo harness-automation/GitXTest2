@@ -6,23 +6,6 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: gh5
-        identifier: gh5
-        template:
-          templateRef: Nov30Stage
-          versionLabel: v1
-          templateInputs:
-            type: Approval
-            spec:
-              execution:
-                steps:
-                  - step:
-                      identifier: asdf
-                      type: HarnessApproval
-                      spec:
-                        approvers:
-                          userGroups: <+input>
-    - stage:
         name: Asdw
         identifier: Asdw
         description: ""
@@ -45,4 +28,19 @@ pipeline:
                       disallowPipelineExecutor: false
                       userGroups: <+input>
                     approverInputs: []
+        tags: {}
+    - stage:
+        name: fgr4
+        identifier: fgr4
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: d
+                  identifier: d
+                  spec:
+                    duration: 10m
         tags: {}
