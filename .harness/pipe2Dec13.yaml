@@ -38,4 +38,19 @@ pipeline:
                   type: KubernetesDirect
                   spec:
                     connectorRef: <+input>
-                    namespace: abcde
+                    namespace: abc
+    - stage:
+        name: stage3
+        identifier: stage3
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: grd
+                  identifier: grd
+                  spec:
+                    duration: 10m
+        tags: {}
