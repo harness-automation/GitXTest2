@@ -44,3 +44,4 @@ pipeline:
                   spec:
                     duration: 10m
         tags: {}
+  description: abc
