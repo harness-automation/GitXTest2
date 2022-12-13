@@ -29,19 +29,4 @@ pipeline:
                       userGroups: <+input>
                     approverInputs: []
         tags: {}
-    - stage:
-        name: fgr4
-        identifier: fgr4
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: Wait
-                  name: d
-                  identifier: d
-                  spec:
-                    duration: 10m
-        tags: {}
   description: abc
