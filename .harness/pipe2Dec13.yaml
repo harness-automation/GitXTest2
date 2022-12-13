@@ -39,18 +39,3 @@ pipeline:
                   spec:
                     connectorRef: <+input>
                     namespace: abc
-    - stage:
-        name: stage3
-        identifier: stage3
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: Wait
-                  name: grd
-                  identifier: grd
-                  spec:
-                    duration: 10m
-        tags: {}
