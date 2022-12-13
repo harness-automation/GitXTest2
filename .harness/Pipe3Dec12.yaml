@@ -29,4 +29,28 @@ pipeline:
                       userGroups: <+input>
                     approverInputs: []
         tags: {}
+    - stage:
+        name: Asdw1
+        identifier: Asdw1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: As2
+                  identifier: As2
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups: <+input>
+                    approverInputs: []
+        tags: {}       
   description: abc
