@@ -6,8 +6,8 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: Asdw
-        identifier: Asdw
+        name: Asdw3
+        identifier: Asdw3
         description: ""
         type: Approval
         spec:
@@ -52,5 +52,5 @@ pipeline:
                       disallowPipelineExecutor: false
                       userGroups: <+input>
                     approverInputs: []
-        tags: {}       
+        tags: {}
   description: abc
