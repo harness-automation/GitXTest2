@@ -1,0 +1,22 @@
+pipeline:
+  name: Remote pipe 2 Dec16
+  identifier: Remote_pipe_2_Dec16
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: abc
+        identifier: abc
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: step1
+                  identifier: step1
+                  spec:
+                    duration: 10m
+        tags: {}
