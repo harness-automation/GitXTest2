@@ -15,7 +15,7 @@ pipeline:
             steps:
               - step:
                   type: Wait
-                  name: step1
+                  name: step12
                   identifier: step1
                   spec:
                     duration: 10m
