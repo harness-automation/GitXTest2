@@ -20,7 +20,7 @@ template:
         infrastructureDefinition:
           type: KubernetesDirect
           spec:
-            connectorRef: <+input>
+            connectorRef: account.k8s_acc_con
             namespace: <+input>
             releaseName: release-<+INFRA_KEY>
         allowSimultaneousDeployments: false
