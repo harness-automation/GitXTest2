@@ -20,3 +20,18 @@ pipeline:
                   spec:
                     duration: 10m
         tags: {}
+    - stage:
+        name: abcd
+        identifier: abcd
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: Wait
+                  name: step1
+                  identifier: step1
+                  spec:
+                    duration: 10m
+        tags: {}
