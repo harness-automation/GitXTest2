@@ -20,7 +20,7 @@ template:
         infrastructureDefinition:
           type: KubernetesDirect
           spec:
-            connectorRef: <+input>
+            connectorRef: github.account123
             namespace: gfgf
             releaseName: release-<+INFRA_KEY>
         allowSimultaneousDeployments: false
