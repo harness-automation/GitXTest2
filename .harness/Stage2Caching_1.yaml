@@ -45,3 +45,10 @@ template:
                 templateRef: K8s_Rollout_Deploy
                 versionLabel: "1"
         rollbackSteps: []
+    delegateSelectors: <+input>
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: MarkAsSuccess
