@@ -14,3 +14,5 @@ pipeline:
           org: Simlified_Git_sync
           pipeline: childPipeline1_feb27
           project: TestAmit
+          outputs: []
+        tags: {}
