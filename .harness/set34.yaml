@@ -1,5 +1,6 @@
 inputSet:
   name: set34
+  tags: {}
   identifier: set34
   orgIdentifier: default
   projectIdentifier: AmitTest
@@ -19,4 +20,4 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: echo 'hisd'
+                          script: echo 'hisddfdff'
