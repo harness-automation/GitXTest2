@@ -1,0 +1,28 @@
+pipeline:
+  name: pipe 1 march9
+  identifier: pipe_1_march9
+  projectIdentifier: TestAmit
+  orgIdentifier: Simlified_Git_sync
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        template:
+          templateRef: stage1_march8
+          versionLabel: "1"
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: e1
+                      template:
+                        templateInputs:
+                          type: ShellScript
+                          spec:
+                            source:
+                              type: Inline
+                              spec:
+                                script: <+input>
