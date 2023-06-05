@@ -1,0 +1,26 @@
+pipeline:
+  name: customer issue 6 june
+  identifier: customer_issue_6_june
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s12
+        identifier: s12
+        template:
+          templateRef: account.stage1_customer_issue_template
+          versionLabel: "1"
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_1
+                      type: ShellScript
+                      spec:
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
