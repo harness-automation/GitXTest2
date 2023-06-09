@@ -15,6 +15,8 @@ template:
       source:
         type: Inline
         spec:
-          script: echo 'hi updated'
+          script: |-
+            echo 'hi updated'
+            asdrr
       environmentVariables: []
       outputVariables: []
