@@ -11,7 +11,7 @@ template:
       source:
         type: Inline
         spec:
-          script: Echo Step S2
+          script: echo Step S2
       environmentVariables: []
       outputVariables: []
     timeout: <+input>
