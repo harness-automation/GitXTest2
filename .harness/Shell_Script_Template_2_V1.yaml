@@ -1,0 +1,27 @@
+template:
+  name: Shell Script Template 2
+  identifier: Shell_Script_Template_2
+  versionLabel: V1
+  type: Stage
+  projectIdentifier: main_cypress_project_Krzysztof_Neumann
+  orgIdentifier: default2
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: echo Step 3
+                environmentVariables: []
+                outputVariables: []
+              timeout: <+input>
