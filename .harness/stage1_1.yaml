@@ -1,0 +1,48 @@
+template:
+  name: stage1
+  type: Stage
+  projectIdentifier: CDCNGAuto_TestingProjAuto2xym5LqpsZ
+  orgIdentifier: CDCNGAuto_TestingOrgAutoYKkvaHt8oS
+  spec:
+    type: Deployment
+    spec:
+      serviceConfig:
+        serviceRef: ServNgMjHGLyVgQq
+        serviceDefinition:
+          spec:
+            variables: []
+          type: Kubernetes
+      infrastructure:
+        environmentRef: CDCNGAuto_EnvNgq1aLjQS0eS
+        infrastructureDefinition:
+          type: KubernetesDirect
+          spec:
+            connectorRef: K8sConnectorbk7Ea5mX0l
+            namespace: default
+            releaseName: release-<+INFRA_KEY>
+        allowSimultaneousDeployments: false
+      execution:
+        steps:
+          - step:
+              type: Http
+              name: https
+              identifier: https
+              spec:
+                url: https://app.harness.io/gateway/pipeline/api/webhook/custom/v2?accountIdentifier=vpCkHKsDSxK9_KYfjCTMKA&orgIdentifier=default&projectIdentifier=CD_Triggers_Automation&pipelineIdentifier=Triggers_Docker&triggerIdentifier=dockertrigger
+                method: POST
+                headers: []
+                outputVariables: []
+                requestBody: |-
+                  {
+                      "tagValue": "VeTvqQ9MQ00"
+                  }
+              timeout: 10m
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
+  identifier: stage1
+  versionLabel: "1"
