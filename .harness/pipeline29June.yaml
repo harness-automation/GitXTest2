@@ -1,5 +1,5 @@
 pipeline:
-  name: pipeline29June
+  name: pipeline29June1
   identifier: pipeline29June
   template:
     templateRef: pipeline29June
