@@ -1,9 +1,35 @@
 pipeline:
   name: pipeline29June
   identifier: pipeline29June
-  template:
-    templateRef: pipeline29June
-    versionLabel: "1"
   tags: {}
   projectIdentifier: AmitTest
   orgIdentifier: GitXOrg
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        template:
+          templateRef: stageGitx2_Repo
+          versionLabel: "1"
+          gitBranch: main-patch
+    - stage:
+        name: s2
+        identifier: s2
+        template:
+          templateRef: stageDefault29June
+          versionLabel: "1"
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: step1
+                      template:
+                        templateInputs:
+                          type: ShellScript
+                          spec:
+                            source:
+                              type: Inline
+                              spec:
+                                script: <+input>
