@@ -1,0 +1,31 @@
+template:
+  name: dfgbxsg
+  identifier: dfgbxsg
+  versionLabel: v3
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: "b "
+          identifier: b
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      onDelegate: true
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo dcd
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
