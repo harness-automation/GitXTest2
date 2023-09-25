@@ -18,3 +18,10 @@ template:
                 templateRef: step25Sept1
                 versionLabel: "1"
                 gitBranch: main
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
