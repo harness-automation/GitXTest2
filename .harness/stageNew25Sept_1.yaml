@@ -1,0 +1,20 @@
+template:
+  name: stageNew25Sept
+  identifier: stageNew25Sept
+  versionLabel: "1"
+  type: Stage
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: Sd23
+              identifier: Sd23
+              template:
+                templateRef: step25Sept1
+                versionLabel: "1"
+                gitBranch: main
