@@ -19,13 +19,6 @@ pipeline:
                   template:
                     templateRef: TemplateStep1
                     versionLabel: "1"
-                    templateInputs:
-                      type: ShellScript
-                      spec:
-                        source:
-                          type: Inline
-                          spec:
-                            script: <+input>
         tags: {}
     - stage:
         name: S2
