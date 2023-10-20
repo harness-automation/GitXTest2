@@ -1,0 +1,29 @@
+pipeline:
+  name: gitsync pipeline20Oct
+  identifier: gitsync_pipeline20Oct
+  projectIdentifier: TestGitSync
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: step1
+                  identifier: step1
+                  template:
+                    templateRef: TemplateStep1
+                    versionLabel: "1"
+                    templateInputs:
+                      type: ShellScript
+                      spec:
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
+        tags: {}
