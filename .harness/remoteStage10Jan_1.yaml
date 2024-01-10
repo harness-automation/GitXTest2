@@ -18,10 +18,3 @@ template:
                 templateRef: remoteStep10Jan
                 versionLabel: "1"
                 gitBranch: main-patch
-                templateInputs:
-                  type: ShellScript
-                  spec:
-                    source:
-                      type: Inline
-                      spec:
-                        script: <+input>
