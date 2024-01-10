@@ -1,0 +1,21 @@
+template:
+  name: remoteStep10Jan
+  identifier: remoteStep10Jan
+  versionLabel: "1"
+  type: Step
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: []
+      outputVariables: []
