@@ -1,0 +1,27 @@
+template:
+  name: remoteStage10Jan
+  identifier: remoteStage10Jan
+  versionLabel: "1"
+  type: Stage
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: S123
+              identifier: S123
+              template:
+                templateRef: remoteStep10Jan
+                versionLabel: "1"
+                gitBranch: main-patch
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
