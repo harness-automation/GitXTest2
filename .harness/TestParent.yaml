@@ -1,0 +1,16 @@
+pipeline:
+  name: TestParent
+  identifier: TestParent
+  projectIdentifier: TestAmit
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S12
+        identifier: S12
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: TestChild
+          project: TestAmit
