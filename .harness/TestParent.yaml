@@ -29,3 +29,12 @@ pipeline:
           org: default
           pipeline: TestChild
           project: TestAmit
+    - stage:
+        name: S34
+        identifier: S34
+        description: ""
+        type: Pipeline
+        spec:
+          org: Pipelines_NonK8s_Org_NG
+          pipeline: testChild123
+          project: TestAmit123
