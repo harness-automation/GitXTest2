@@ -5,26 +5,50 @@ pipeline:
   orgIdentifier: Pipelines_NonK8s_Org_NG
   tags: {}
   stages:
-    - stage:
-        name: S1
-        identifier: S1
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
+    - parallel:
+        - stage:
+            name: S1
+            identifier: S1
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
                       spec:
-                        script: <+input>
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+        - stage:
+            name: s2
+            identifier: s2
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: exit 1
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
