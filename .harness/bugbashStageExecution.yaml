@@ -1,0 +1,10 @@
+pipeline:
+  name: bugbashStageExecution
+  identifier: bugbashStageExecution
+  tags: {}
+  template:
+    templateRef: org.RemotePipelineTemplate22Feb
+    versionLabel: "1"
+    gitBranch: feature/main-patch
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
