@@ -1,6 +1,6 @@
 pipeline:
   name: test gitwebhook sync
-  identifier: test_gitwebhook_sync
+  identifier: test_gitwebhook_sync2
   projectIdentifier: AmitTest
   orgIdentifier: default
   tags: {}
