@@ -1,0 +1,33 @@
+template:
+  name: pipelineTemplate12Apr
+  identifier: pipelineTemplate12Apr
+  versionLabel: "1"
+  type: Pipeline
+  projectIdentifier: SimplifiedGitSync_Do_Not_Delete
+  orgIdentifier: Simlified_Git_sync
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s23
+          identifier: s23
+          tags: {}
+          template:
+            templateRef: org.stageTemplate12Apr
+            versionLabel: "1"
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: s2
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: <+input>
