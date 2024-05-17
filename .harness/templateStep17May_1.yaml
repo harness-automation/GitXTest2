@@ -1,0 +1,19 @@
+template:
+  name: templateStep17May
+  identifier: templateStep17May
+  versionLabel: "1"
+  type: Step
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: []
+      outputVariables: []
