@@ -1,0 +1,28 @@
+template:
+  name: steptemp567
+  identifier: steptemp567
+  versionLabel: "1"
+  type: Step
+  tags: {}
+  spec:
+    type: GitOpsSync
+    timeout: 10m
+    spec:
+      prune: false
+      dryRun: false
+      applyOnly: false
+      forceApply: false
+      applicationsList: []
+      retryStrategy:
+        limit: 2
+        baseBackoffDuration: 5s
+        increaseBackoffByFactor: 2
+        maxBackoffDuration: 3m5s
+      retry: false
+      syncOptions:
+        skipSchemaValidation: false
+        autoCreateNamespace: false
+        pruneResourcesAtLast: false
+        applyOutOfSyncOnly: false
+        replaceResources: false
+        prunePropagationPolicy: foreground
