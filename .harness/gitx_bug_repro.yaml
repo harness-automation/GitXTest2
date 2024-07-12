@@ -4,7 +4,7 @@ pipeline:
   projectIdentifier: Test_AR7
   orgIdentifier: default
   tags: {}
-  stages:
+   stages:
     - stage:
         name: s1
         identifier: s1
