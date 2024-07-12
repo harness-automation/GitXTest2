@@ -8,7 +8,7 @@ template:
   tags: {}
   spec:
     type: Custom
-    spec:
+      spec:
       execution:
         steps:
           - step:
