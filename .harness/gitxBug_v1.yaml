@@ -8,10 +8,10 @@ template:
   tags: {}
   spec:
     type: Custom
-       spec:
+    spec:
       execution:
-          steps:
-           - step:
+        steps:
+          - step:
               type: ShellScript
               name: ShellScript_1
               identifier: ShellScript_1
