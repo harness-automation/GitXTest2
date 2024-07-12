@@ -5,7 +5,7 @@ pipeline:
   orgIdentifier: Ng_Pipelines_K8s_Organisations
   tags: {}
   stages:
-      - stage:
+    - stage:
         name: s1
         identifier: s1
         description: ""
