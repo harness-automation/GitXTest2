@@ -1,0 +1,22 @@
+template:
+  name: test_delete
+  identifier: test_delete
+  versionLabel: v1
+  type: Step
+  projectIdentifier: Test_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: Command
+    spec:
+      onDelegate: false
+      environmentVariables: []
+      outputVariables: []
+      commandUnits:
+        - identifier: tt
+          name: tt
+          type: Copy
+          spec:
+            sourceType: Artifact
+            destinationPath: <+input>
