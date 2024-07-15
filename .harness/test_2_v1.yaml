@@ -1,0 +1,22 @@
+template:
+  name: test_2
+  identifier: test_2
+  versionLabel: v1
+  type: Step
+  projectIdentifier: Test_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: Command
+    spec:
+      onDelegate: false
+      environmentVariables: []
+      outputVariables: []
+      commandUnits:
+        - identifier: d
+          name: d
+          type: Copy
+          spec:
+            sourceType: Artifact
+            destinationPath: <+input>
