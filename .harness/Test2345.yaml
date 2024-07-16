@@ -10,7 +10,7 @@ pipeline:
         identifier: s1
         description: ""
         type: Custom
-        spec:
+         spec:
           execution:
             steps:
               - step:
