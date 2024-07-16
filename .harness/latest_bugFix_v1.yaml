@@ -6,7 +6,7 @@ template:
   projectIdentifier: Test_AR7
   orgIdentifier: default
   tags: {}
-  spec:
+   spec:
     stages:
       - stage:
           name: s1
