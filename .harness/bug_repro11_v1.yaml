@@ -6,7 +6,7 @@ template:
   projectIdentifier: Test_AR7
   orgIdentifier: default
   tags: {}
-  spec:
+   spec:
     type: Custom
     spec:
       execution:
