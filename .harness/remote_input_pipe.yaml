@@ -2,7 +2,7 @@ pipeline:
   name: remote_input_pipe
   identifier: remote_input_pipe
   projectIdentifier: DoNotDelete_AR7_rename
-  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  orgIdentifier: Ng_Pipelines_K8s_Organisations_wer
   tags: {}
   stages:
     - stage:
