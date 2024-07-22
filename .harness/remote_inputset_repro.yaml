@@ -1,7 +1,7 @@
 inputSet:
   name: remote_inputset_repro
   identifier: remote_inputset_repro
-  orgIdentifier: default
+  orgIdentifier: default2
   projectIdentifier: Test_AR7_fix
   pipeline:
     identifier: remote_inputSet_issue_repro
