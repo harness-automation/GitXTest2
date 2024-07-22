@@ -1,8 +1,9 @@
 inputSet:
   name: remote_inputset_repro
+  tags: {}
   identifier: remote_inputset_repro
-  orgIdentifier: default2
-  projectIdentifier: Test_AR7_fix
+  orgIdentifier: default
+  projectIdentifier: Test_AR7
   pipeline:
     identifier: remote_inputSet_issue_repro
     stages:
