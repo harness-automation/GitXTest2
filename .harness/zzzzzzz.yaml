@@ -2,7 +2,7 @@ inputSet:
   name: zzzzzzz
   identifier: zzzzzzz
   orgIdentifier: Ng_Pipelines_K8s_Organisations
-  projectIdentifier: DoNotDelete_AR7_test
+  projectIdentifier: DoNotDelete_AR7_rename
   pipeline:
     identifier: remote_input_pipe
     stages:
