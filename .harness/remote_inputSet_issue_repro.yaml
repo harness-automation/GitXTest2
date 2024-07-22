@@ -1,7 +1,7 @@
 pipeline:
   name: remote_inputSet_issue_repro
   identifier: remote_inputSet_issue_repro
-  projectIdentifier: Test_AR7
+  projectIdentifier: Test_AR7_projectChange
   orgIdentifier: default
   tags: {}
   stages:
