@@ -1,8 +1,9 @@
 inputSet:
-  name: template_innn
+  name: template_innn_1231
+  tags: {}
   identifier: template_innn
   orgIdentifier: default
-  projectIdentifier: Test_AR7_fix
+  projectIdentifier: Test_AR7
   pipeline:
     identifier: temp_inpt_remote
     stages:
