@@ -3,7 +3,7 @@ inputSet:
   identifier: invalid_remote_inputSet_yaml
   orgIdentifier: default
   projectIdentifier: Test_AR7
-  pipeline:
+   pipeline:
     identifier: invalid_remote_inputSet
     stages:
       - stage:
