@@ -3,7 +3,7 @@ inputSet:
   tags: {}
   identifier: template_innn
   orgIdentifier: default
-  projectIdentifier: Test_AR7
+  projectIdentifier: Test_AR7_dwdw
   pipeline:
     identifier: temp_inpt_remote
     stages:
