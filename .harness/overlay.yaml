@@ -2,7 +2,7 @@ overlayInputSet:
   name: overlay
   identifier: overlay
   orgIdentifier: default
-  projectIdentifier: Test_AR7_fix
+  projectIdentifier: Test_AR7_fix2
   pipelineIdentifier: temp_inpt_remote
   inputSetReferences:
     - template_innn
