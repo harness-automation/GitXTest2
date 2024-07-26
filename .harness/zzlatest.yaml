@@ -3,7 +3,7 @@ inputSet:
   identifier: zzlatest
   orgIdentifier: Ng_Pipelines_K8s_Organisations
   projectIdentifier: DoNotDelete_AR7
-  pipeline:
+   pipeline:
     identifier: remote_input_pipe
     stages:
       - stage:
