@@ -3,7 +3,7 @@ inputSet:
   identifier: InvalidInputSet
   orgIdentifier: Simlified_Git_sync
   projectIdentifier: SimplifiedGitSync_Do_Not_Delete
-  pipeline:
+   pipeline:
     identifier: Rishi
     stages:
       - stage:
