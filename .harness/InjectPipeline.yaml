@@ -40,7 +40,7 @@ pipeline:
                                         script: echo 'remote update'
                                     environmentVariables: []
                                     outputVariables: []
-                                  timeout: 10m     
+                                  timeout: 10m
                         - step:
                             identifier: ShellScript_1
                             type: ShellScript
@@ -62,8 +62,14 @@ pipeline:
                                     source:
                                       type: Inline
                                       spec:
-                                        script: <+input>
+                                        script: echo <+pipeline.variables.var1> <+pipeline.variables.var1>
                                     environmentVariables: []
                                     outputVariables: []
                                   timeout: 10m
         tags: {}
+  variables:
+    - name: var1
+      type: String
+      description: ""
+      required: false
+      value: exit 1
