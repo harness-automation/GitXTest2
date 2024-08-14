@@ -5,7 +5,9 @@ template:
   type: StepGroup
   projectIdentifier: AmitTest
   orgIdentifier: Pipelines_NonK8s_Org_NG
-  tags: {}
+  tags:
+    v1: t1
+    v2: t2
   spec:
     stageType: Custom
     steps:
