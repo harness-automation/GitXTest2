@@ -16,8 +16,8 @@ template:
           name: injectSteps1
           steps: <+input>
       - inject:
-          identifier: injectSteps2
-          name: injectSteps1
+          identifier: injectSteps3
+          name: injectSteps3
           steps: <+input>    
       - step:
           type: ShellScript
