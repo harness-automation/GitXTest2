@@ -24,7 +24,7 @@ pipeline:
                         - inject:
                             identifier: injectSteps1
                             steps: <+input>
-                       - inject:
+                        - inject:
                             identifier: injectSteps3
                             steps:
                               - step:
