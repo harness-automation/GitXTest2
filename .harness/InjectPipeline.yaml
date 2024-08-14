@@ -96,24 +96,37 @@ pipeline:
                                 outputVariables: []
                                 timeout: 10m
     - inject:
-        identifier: injectStages12
-        name: injectStages12
+        identifier: inject
+        name: inject
         stages:
           - stage:
-              name: das
-              identifier: das
-              description: ""
+              identifier: fdsf1
               type: Custom
+              name: fdsf1
+              description: ""
               spec:
                 execution:
                   steps:
                     - step:
+                        identifier: baharWait
                         type: Wait
-                        name: Wait_1
-                        identifier: Wait_1
+                        name: baharWait
                         spec:
-                          duration: 10m
-              tags: {}
+                          duration: 10s
+          - stage:
+              identifier: fdsf2
+              type: Custom
+              name: fdsf2
+              description: ""
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: baharWait2
+                        type: Wait
+                        name: baharWait2
+                        spec:
+                          duration: 10s
   variables:
     - name: var1
       type: String
