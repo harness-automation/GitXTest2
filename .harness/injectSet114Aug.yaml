@@ -1,0 +1,41 @@
+inputSet:
+  name: injectSet114Aug
+  identifier: injectSet114Aug
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: InjectPipeline
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - stepGroup:
+                    identifier: stepgroup1
+                    template:
+                      templateInputs:
+                        steps:
+                          - inject:
+                              identifier: injectSteps1
+                              steps: <+input>
+                          - step:
+                              identifier: ShellScript_1
+                              type: ShellScript
+                              spec:
+                                source:
+                                  type: Inline
+                                  spec:
+                                    script: echo 'inputset'
+                          - inject:
+                              identifier: injectSteps2
+                              steps:
+                                - step:
+                                    identifier: ShellScript_2
+                                    type: ShellScript
+                                    spec:
+                                      source:
+                                        type: Inline
+                                        spec:
+                                          script: echo 'inputset'
