@@ -95,30 +95,32 @@ pipeline:
                                 environmentVariables: []
                                 outputVariables: []
                                 timeout: 10m
-    - identifier: injectStages1
-      stages:
-        - stage:
-            name: s4
-            identifier: s4
-            description: ""
-            type: Custom
-            spec:
-              execution:
-                steps:
-                  - step:
-                      type: ShellScript
-                      name: ShellScript_1
-                      identifier: ShellScript_1
-                      spec:
-                        shell: Bash
-                        executionTarget: {}
-                        source:
-                          type: Inline
-                          spec:
-                            script: exit 1
-                        environmentVariables: []
-                        outputVariables: []
-                      timeout: 10m
+    - inject:
+        identifier: injectStages1
+        name: injectStages1
+        stages:
+          - stage:
+              name: s4
+              identifier: s4
+              description: ""
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        type: ShellScript
+                        name: ShellScript_1
+                        identifier: ShellScript_1
+                        spec:
+                          shell: Bash
+                          executionTarget: {}
+                          source:
+                            type: Inline
+                            spec:
+                              script: exit 1
+                          environmentVariables: []
+                          outputVariables: []
+                        timeout: 10m
   variables:
     - name: var1
       type: String
