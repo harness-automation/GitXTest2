@@ -96,8 +96,8 @@ pipeline:
                                 outputVariables: []
                                 timeout: 10m
     - inject:
-        identifier: injectStages1
-        name: injectStages1
+        identifier: injectStages12
+        name: injectStages12
         stages:
           - stage:
               name: s4
