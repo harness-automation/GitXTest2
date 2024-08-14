@@ -24,6 +24,23 @@ pipeline:
                         - inject:
                             identifier: injectSteps1
                             steps: <+input>
+                       - inject:
+                            identifier: injectSteps3
+                            steps:
+                              - step:
+                                  type: ShellScript
+                                  name: ShellScript_3
+                                  identifier: ShellScript_3
+                                  spec:
+                                    shell: Bash
+                                    executionTarget: {}
+                                    source:
+                                      type: Inline
+                                      spec:
+                                        script: echo 'remote update'
+                                    environmentVariables: []
+                                    outputVariables: []
+                                  timeout: 10m     
                         - step:
                             identifier: ShellScript_1
                             type: ShellScript
