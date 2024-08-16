@@ -5,7 +5,7 @@ inputSet:
   projectIdentifier: ar7_test
   pipeline:
     identifier: remote_inputSet_pipe
-    stages:
+     stages:
       - stage:
           identifier: s1
           type: Custom
