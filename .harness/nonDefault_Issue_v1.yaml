@@ -1,0 +1,17 @@
+template:
+  name: nonDefault_Issue
+  identifier: nonDefault_Issue
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: Test_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          tags: {}
+          template:
+            templateRef: nonDefault_issue
+            versionLabel: v1
