@@ -15,3 +15,4 @@ template:
           template:
             templateRef: stageLvl_NonDefaultBranch_P1_issue
             versionLabel: v1
+            gitBranch: main-patch-ar7
