@@ -1,0 +1,10 @@
+pipeline:
+  name: branchIssue_RemotePipe
+  identifier: branchIssue_RemotePipe
+  tags: {}
+  template:
+    templateRef: nonDefault_Issue
+    versionLabel: v1
+    gitBranch: main-patch-ar7
+  projectIdentifier: Test_AR7
+  orgIdentifier: default
