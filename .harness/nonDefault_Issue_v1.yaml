@@ -15,3 +15,4 @@ template:
           template:
             templateRef: nonDefault_issue
             versionLabel: v1
+            gitBranch: main-patch-ar7
