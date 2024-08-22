@@ -5,7 +5,7 @@ inputSet:
   projectIdentifier: AR7_Tets
   pipeline:
     identifier: FF_inputSet
-     stages:
+    stages:
       - stage:
           identifier: s1
           type: Custom
