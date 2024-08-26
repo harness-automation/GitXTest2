@@ -3,7 +3,7 @@ inputSet:
   identifier: I1_ff_harness_dev
   orgIdentifier: Ng_Pipelines_K8s_Organisations
   projectIdentifier: AR7_Tets
-  pipeline:
+   pipeline:
     identifier: FF_inputSet
     stages:
       - stage:
