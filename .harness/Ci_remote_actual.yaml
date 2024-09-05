@@ -1,0 +1,47 @@
+pipeline:
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.github_Account_level_connector_delegate
+        repoName: GitXTest2
+        build: <+input>
+  stages:
+  - stage:
+      name: s1
+      identifier: s1
+      description: ""
+      type: CI
+      spec:
+        cloneCodebase: true
+        caching:
+          enabled: true
+        infrastructure:
+          type: KubernetesDirect
+          spec:
+            connectorRef: account.CDNGAuto_K8sConnectordBOhpoy9AM
+            namespace: default
+            automountServiceAccountToken: true
+            nodeSelector: {}
+            os: Linux
+        execution:
+          steps:
+          - step:
+              type: Run
+              name: Run_1
+              identifier: Run_1
+              spec:
+                connectorRef: account.DockerConnectoruAJUx7cyC0
+                image: nginx
+                shell: Sh
+                command: exit 0
+      failureStrategies:
+      - onFailure:
+          errors:
+          - AllErrors
+          action:
+            type: MarkAsFailure
+  identifier: Ci_remote_actual
+  name: Ci_remote -actual
