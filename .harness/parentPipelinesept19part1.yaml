@@ -14,4 +14,5 @@ pipeline:
           org: Pipelines_NonK8s_Org_NG
           pipeline: ChildRemoteNonDefault
           project: AmitTest
-          inputSetReferences: []
+          inputSetReferences:
+            - inputSetp19
