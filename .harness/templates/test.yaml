@@ -1,7 +1,6 @@
 template:
   name: js-build
   type: Step
-  orgIdentifier: client_service_engagement
   spec:
     type: Run
     spec:
