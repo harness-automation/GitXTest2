@@ -1,6 +1,5 @@
 template:
   name: js-build
-  type: Step
   projectIdentifier: Test_AR7
   orgIdentifier: default
   spec:
