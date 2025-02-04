@@ -28,3 +28,7 @@ template:
                       - name: var1
                         type: String
                         value: <+input>
+          - insert:
+              name: stepInsert
+              identifier: stepInsert
+              steps: <+input>
