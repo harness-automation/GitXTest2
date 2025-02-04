@@ -27,3 +27,25 @@ pipeline:
                               type: Inline
                               spec:
                                 script: <+input>
+    - stage:
+        name: stage2
+        identifier: stage2
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: step23
+                  identifier: step23
+                  template:
+                    templateRef: StepTemplate04Feb
+                    versionLabel: v1
+                    templateInputs:
+                      type: ShellScript
+                      spec:
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
+        tags: {}
