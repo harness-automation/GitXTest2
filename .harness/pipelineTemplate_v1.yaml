@@ -15,17 +15,4 @@ template:
           template:
             templateRef: StageTemplateFeb04
             versionLabel: v1
-            gitBranch: main
-            templateInputs:
-              type: Custom
-              spec:
-                execution:
-                  steps:
-                    - step:
-                        identifier: ShellScript_1
-                        type: ShellScript
-                        spec:
-                          source:
-                            type: Inline
-                            spec:
-                              script: <+input>
+            gitBranch: 04Feb
