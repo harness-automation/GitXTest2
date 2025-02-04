@@ -33,7 +33,24 @@ pipeline:
                                 value: <+input>
                   - insert:
                       identifier: stepInsert
-                      steps: <+input>
+                      steps:
+                        - step:
+                            name: stepInsert
+                            identifier: stepInsert
+                            template:
+                              templateRef: StepTemplate04Feb
+                              versionLabel: v1
+                              templateInputs:
+                                type: ShellScript
+                                spec:
+                                  source:
+                                    type: Inline
+                                    spec:
+                                      script: <+input>
+                                  environmentVariables:
+                                    - name: var1
+                                      type: String
+                                      value: <+input>
     - stage:
         name: stage2
         identifier: stage2
