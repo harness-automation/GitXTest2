@@ -15,4 +15,3 @@ template:
           template:
             templateRef: StageTemplateFeb04
             versionLabel: v2
-            gitBranch: main
