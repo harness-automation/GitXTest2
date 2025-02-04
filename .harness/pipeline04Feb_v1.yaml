@@ -1,0 +1,18 @@
+template:
+  name: pipeline04Feb
+  identifier: pipeline04Feb
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s2
+          identifier: s2
+          tags: {}
+          template:
+            templateRef: StageTemplateFeb04
+            versionLabel: v2
+            gitBranch: main
