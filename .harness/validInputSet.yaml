@@ -1,0 +1,15 @@
+inputSet:
+  name: validInputSet
+  identifier: validInputSet
+  orgIdentifier: Simlified_Git_sync
+  projectIdentifier: SimplifiedGitSync_Do_Not_Delete
+  pipeline:
+    identifier: Rishi
+    stages:
+      - stage:
+          identifier: cs1
+          type: Custom
+          variables:
+            - name: testVar
+              type: String
+              value: Valid

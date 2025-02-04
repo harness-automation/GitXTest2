@@ -1,0 +1,18 @@
+inputSet:
+  name: input_last22
+  identifier: input_last22
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: DoNotDelete_AR7
+  pipeline:
+    identifier: remote_input_pipe38r302
+     stages:
+      - stage:
+          identifier: s
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10s

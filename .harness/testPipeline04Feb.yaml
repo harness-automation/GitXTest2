@@ -1,0 +1,10 @@
+pipeline:
+  name: testPipeline04Feb
+  identifier: testPipeline04Feb
+  tags: {}
+  template:
+    templateRef: pipelineTemplate
+    versionLabel: v2
+    gitBranch: 04Feb
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG

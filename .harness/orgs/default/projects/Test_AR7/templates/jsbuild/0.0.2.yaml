@@ -1,0 +1,24 @@
+template:
+  name: js-build
+  projectIdentifier: Test_AR7
+  orgIdentifier: default
+  spec:
+    type: Run
+    spec:
+      connectorRef: <+variable.project>azurecne<+stage.variables.env><+variable.hub><+variable.lab>labacr
+      image: node/node-20:latest
+      shell: Bash
+      command: $PACKAGE_MANAGER_RUN build
+      envVariables:
+        PACKAGE_MANAGER_RUN: <+pipeline.stages.ci.spec.execution.steps.setcivariables.output.outputVariables.PACKAGE_MANAGER_RUN>
+      runAsUser: "0"
+      resources:
+        limits:
+          memory: 16G
+          cpu: "4"
+    description: JS Build
+    when:
+      stageStatus: Success
+  identifier: jsbuild
+  versionLabel: 0.0.2
+  tags: {}

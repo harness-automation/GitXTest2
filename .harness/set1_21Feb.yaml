@@ -1,0 +1,22 @@
+inputSet:
+  name: set1 21Feb
+  identifier: set1_21Feb
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: testChild
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo 'hi'

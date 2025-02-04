@@ -1,0 +1,21 @@
+inputSet:
+  name: inp1
+  identifier: inp1
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: DoNotDelete_AmitSingh
+  pipeline:
+    identifier: test_pipeline123
+    stages:
+      - stage:
+          identifier: Ap1
+          type: Approval
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: sw3
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                          - account._account_all_users

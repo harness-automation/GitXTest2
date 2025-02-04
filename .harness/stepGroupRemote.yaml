@@ -1,0 +1,39 @@
+template:
+  name: InjectTestingStepGroupTemplate
+  identifier: InjectTestingStepGroupTemplateRemote24Aug
+  versionLabel: "1"
+  type: StepGroup
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags:
+    v1: t1
+    v2: t2
+  spec:
+    stageType: Custom
+    steps:
+      - inject:
+          identifier: injectSteps1
+          name: injectSteps1
+          steps: <+input>
+      - inject:
+          identifier: injectSteps3
+          name: injectSteps3
+          steps: <+input>    
+      - step:
+          type: ShellScript
+          name: ShellScript_1
+          identifier: ShellScript_1
+          spec:
+            shell: Bash
+            executionTarget: {}
+            source:
+              type: Inline
+              spec:
+                script: <+input>
+            environmentVariables: []
+            outputVariables: []
+          timeout: 10m
+      - inject:
+          identifier: injectSteps2
+          name: injectSteps2
+          steps: <+input>

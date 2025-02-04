@@ -1,0 +1,23 @@
+template:
+  name: step1 march10
+  identifier: step1_march10
+  versionLabel: "1"
+  type: Step
+  projectIdentifier: AmitTest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: |-
+            echo 'hi updated'
+            asdrr
+            <+input>
+      environmentVariables: []
+      outputVariables: []

@@ -1,0 +1,18 @@
+inputSet:
+  name: I1_ff_harness_dev
+  identifier: null
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: AR7_Tets
+  pipeline:
+    identifier: FF_inputSet
+     stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10s

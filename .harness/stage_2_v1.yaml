@@ -1,0 +1,20 @@
+template:
+  name: stage_2
+  identifier: stage_2
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: test
+  orgIdentifier: DoNotDeleteTriggerOrg
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: step2
+              identifier: step2
+              template:
+                templateRef: step_2
+                versionLabel: v1
+                gitBranch: main

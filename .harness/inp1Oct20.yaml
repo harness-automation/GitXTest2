@@ -1,0 +1,36 @@
+inputSet:
+  name: inp1Oct20
+  identifier: inp1Oct20
+  orgIdentifier: default
+  projectIdentifier: TestGitSync
+  pipeline:
+    identifier: gitsync_pipeline20Oct
+    stages:
+      - stage:
+          identifier: S2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: exit 1
+      - stage:
+          identifier: S3
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_3
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: exit 1

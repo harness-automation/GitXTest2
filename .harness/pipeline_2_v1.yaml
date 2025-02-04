@@ -1,0 +1,16 @@
+template:
+  name: pipeline_2
+  identifier: pipeline_2
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: test
+  orgIdentifier: DoNotDeleteTriggerOrg
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          template:
+            templateRef: stage_2
+            versionLabel: v1

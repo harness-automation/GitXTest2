@@ -1,0 +1,19 @@
+inputSet:
+  name: remote_inputset_repro
+  tags: {}
+  identifier: remote_inputset_repro
+  orgIdentifier: default
+  projectIdentifier: Test_AR7_fix
+  pipeline:
+    identifier: remote_inputSet_issue_repro
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10m

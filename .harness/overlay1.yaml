@@ -1,0 +1,10 @@
+overlayInputSet:
+  name: overlay1
+  identifier: overlay1
+  orgIdentifier: Simlified_Git_sync
+  projectIdentifier: TestAmit
+  pipelineIdentifier: pipe_1_march9
+  inputSetReferences:
+    - set2_march10
+    - set_3_march10
+  tags: {}

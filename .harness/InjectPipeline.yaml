@@ -1,0 +1,135 @@
+pipeline:
+  name: InjectPipeline
+  identifier: InjectPipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - stepGroup:
+                  name: stepgroup1
+                  identifier: stepgroup1
+                  template:
+                    templateRef: InjectTestingStepGroupTemplateRemote24Aug
+                    versionLabel: "1"
+                    templateInputs:
+                      steps:
+                        - inject:
+                            identifier: injectSteps1
+                            steps: <+input>
+                        - inject:
+                            identifier: injectSteps3
+                            steps:
+                              - step:
+                                  type: ShellScript
+                                  name: ShellScript_3
+                                  identifier: ShellScript_3
+                                  spec:
+                                    shell: Bash
+                                    executionTarget: {}
+                                    source:
+                                      type: Inline
+                                      spec:
+                                        script: echo 'remote update'
+                                    environmentVariables: []
+                                    outputVariables: []
+                                  timeout: 10m
+                        - step:
+                            identifier: ShellScript_1
+                            type: ShellScript
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: <+input>
+                        - inject:
+                            identifier: injectSteps2
+                            steps:
+                              - step:
+                                  type: ShellScript
+                                  name: ShellScript_2
+                                  identifier: ShellScript_2
+                                  spec:
+                                    shell: Bash
+                                    executionTarget: {}
+                                    source:
+                                      type: Inline
+                                      spec:
+                                        script: <+pipeline.variables.var1>
+                                    environmentVariables: []
+                                    outputVariables: []
+                                  timeout: 10m
+        tags: {}
+    - stage:
+        name: s2
+        identifier: s2
+        tags: {}
+        template:
+          templateRef: InjectStage
+          versionLabel: v1
+          templateInputs:
+            type: Deployment
+            spec:
+              execution:
+                rollbackSteps:
+                  - inject:
+                      identifier: injectSteps2
+                      steps:
+                        - step:
+                            type: ShellScript
+                            name: ShellScript_2
+                            identifier: ShellScript_2
+                            spec:
+                              shell: Bash
+                              executionTarget: {}
+                              source:
+                                type: Inline
+                                script: exit 0
+                                environmentVariables: []
+                                outputVariables: []
+                                timeout: 10m
+    - inject:
+        identifier: inject
+        name: inject
+        stages:
+          - stage:
+              identifier: fdsf1
+              type: Custom
+              name: fdsf1
+              description: ""
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: baharWait
+                        type: Wait
+                        name: baharWait
+                        spec:
+                          duration: 10s
+          - stage:
+              identifier: fdsf2
+              type: Custom
+              name: fdsf2
+              description: ""
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: baharWait2
+                        type: Wait
+                        name: baharWait2
+                        spec:
+                          duration: 10s
+  variables:
+    - name: var1
+      type: String
+      description: ""
+      required: false
+      value: exit 1

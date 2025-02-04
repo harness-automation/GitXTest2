@@ -1,0 +1,40 @@
+template:
+  name: Stage19Sept
+  identifier: Stage19Sept
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: step1
+              identifier: step1
+              template:
+                templateRef: shellScript19Sept
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    outputVariables:
+                      - name: var1
+                        type: String
+                        value: <+input>
+    variables:
+      - name: var2
+        type: String
+        description: ""
+        required: true
+        value: <+input>.allowedValues(v1,v2,v3)
+      - name: var3
+        type: String
+        description: ""
+        required: false
+        value: <+input>.selectOneFrom(v3,v4,v5)

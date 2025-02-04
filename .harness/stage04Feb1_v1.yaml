@@ -1,0 +1,37 @@
+template:
+  name: stage04Feb-1
+  identifier: stage04Feb1
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: step12
+              identifier: step12
+              template:
+                templateRef: StepTemplate04Feb
+                versionLabel: v1
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    environmentVariables:
+                      - name: var1
+                        type: String
+                        value: <+input>
+                      - name: var2
+                        type: String
+                        value: <+input>
+          - insert:
+              name: stepInsert
+              identifier: stepInsert
+              steps: <+input>
