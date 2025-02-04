@@ -31,6 +31,9 @@ pipeline:
                               - name: var1
                                 type: String
                                 value: <+input>
+                  - insert:
+                      identifier: stepInsert
+                      steps: <+input>
     - stage:
         name: stage2
         identifier: stage2
