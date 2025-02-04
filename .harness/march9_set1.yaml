@@ -1,0 +1,27 @@
+inputSet:
+  name: march9 set1
+  tags: {}
+  identifier: march9_set1
+  orgIdentifier: Simlified_Git_sync
+  projectIdentifier: TestAmit
+  pipeline:
+    identifier: pipe_1_march9
+    stages:
+      - stage:
+          identifier: S1
+          template:
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: e1
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: echo 'hi update'

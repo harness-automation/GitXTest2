@@ -1,0 +1,15 @@
+template:
+  name: dfgbxsg
+  identifier: dfgbxsg
+  versionLabel: v3
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: pl_auto_template_Nkqpe
+          identifier: pl_auto_template_Nkqpe
+          template:
+            templateRef: account.pl_auto_template_Nkqpe
+            versionLabel: v3
+            gitBranch: main
