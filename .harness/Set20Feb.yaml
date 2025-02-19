@@ -1,0 +1,67 @@
+inputSet:
+  name: Set20Feb
+  identifier: Set20Feb
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: AmitTest
+  pipeline:
+    identifier: FebPipeline1
+    stages:
+      - stage:
+          identifier: stage1
+          template:
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: step12
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: ""
+                              environmentVariables:
+                                - name: var1
+                                  type: String
+                                  value: ""
+                    - insert:
+                        identifier: stepInsert
+                        steps:
+                          - step:
+                              identifier: stepInsert
+                              template:
+                                templateInputs:
+                                  type: ShellScript
+                                  spec:
+                                    source:
+                                      type: Inline
+                                      spec:
+                                        script: ""
+                                    environmentVariables:
+                                      - name: var1
+                                        type: String
+                                        value: ""
+      - stage:
+          identifier: stage2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: step23
+                    template:
+                      templateInputs:
+                        type: ShellScript
+                        spec:
+                          source:
+                            type: Inline
+                            spec:
+                              script: ""
+                          environmentVariables:
+                            - name: var1
+                              type: String
+                              value: ""
